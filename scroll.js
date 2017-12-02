@@ -1,38 +1,40 @@
-
-
 var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.records = [{
-        id: 1,
-        name: "mia"
-    }, {
-        id: 2,
-        name: "juan"
-    },{
-        id: 2,
-        name: "juan"
-    },{
-        id: 2,
-        name: "juan"
-    }]
-});
+app.directive("scrollFunction", function () {
+    return {
+        restrict: 'A',
+        link: function link($scope, $element, $attr) {
+            console.log('HELLO!!!');
+            var avance = 0;
+            $scope.records = [{
+                id: 1,
+                name: "mia"
+            }, {
+                id: 2,
+                name: "juan"
+            },{
+                id: 2,
+                name: "juan"
+            },{
+                id: 2,
+                name: "juan"
+            }];
+                $("#boton").click(function (event) {
+                    if (avance > 0) {
+                        avance = avance - 30;
+                    }
 
+                    $("div.m_wrap > .dx").scrollLeft(avance);
+                });
+                $("#botonstop").click(function (event) {
+                    avance = avance + 30;
 
-
-
-var avance = 0;
-$(document).ready(function() {
-
-    $("#boton").click(function(event) {
-        if (avance > 0) {
-            avance = avance - 30;
+                    $("div.m_wrap > .dx").scrollLeft(avance);
+                });
         }
+    }
 
-        $("div.m_wrap > .dx").scrollLeft(avance);
-    });
-    $("#botonstop").click(function(event) {
-        avance = avance + 30;
-
-        $("div.m_wrap > .dx").scrollLeft(avance);
-    });
 });
+
+
+
+
