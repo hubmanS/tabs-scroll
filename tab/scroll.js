@@ -34,6 +34,10 @@ app.directive("scrollFunction", function () {
     }
 
 });
+app.component("helloWorld",{
+    template: 'Hello {{$ctrl.name}}!',
+    bindings: { name: '@' }
+    });
 
 
 
