@@ -1,33 +1,25 @@
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-
 <script src="scroll.js"></script>
-
 <link rel="stylesheet" href="styl.css">
+<section>
+<button class="rt"><i id="boton" class="material-icons">arrow_back</i></button>
 
-
-<div ng-app="myApp">
-
+<div class="rt" ng-app="myApp">
     <div scroll-function>
         <div class="m_wrap">
             <div class="dx">
                 <div class="xc" ng-repeat="x in records">
-                    <hello-world name={{x.name}} ></hello-world>
+                    <hello-world name={{x.name}}></hello-world>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div id="caja">
-    <i class="material-icons">undo</i>
-    <a id="boton"><img src="https://image.freepik.com/iconos-gratis/flecha-en-negrita-izquierda-ios-7-simbolo-interfaz_318-34824.jpg" alt="Smiley face" height="42" width="42"></a>
-    <a id="botonstop"><img src="http://www.clker.com/cliparts/q/r/x/A/Y/N/arrow.svg" alt="Smiley face" height="42" width="42"></a>
-    <i class="material-icons">trending_flat</i>
-</div>
+
+<button class="rt"><i id="botonstop" class="material-icons">arrow_forward</i></button>
+</section>

@@ -1,22 +1,29 @@
 .m_wrap {
-    height: 80px;
     overflow: hidden;
-    width: 188px;
+    width: 408px;
+    border: 1px solid gray;
 }
 
 .dx {
     white-space: nowrap;
-
     overflow: hidden;
-    border: 1px solid gray;
+
+    width: 400px;
 }
 
 .xc {
     display: inline-block;
     width: 100px;
-    height: 280px;
-    border: 1px solid;
+    height: 10%;
     line-height: 80px;
     text-align: center;
     margin-bottom: 4px;
+}
+.rt{
+    float: left;
+}
+
+#figure{
+    margin-right: 10%;
+    background-color: cadetblue;
 }

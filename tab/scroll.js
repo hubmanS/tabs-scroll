@@ -7,37 +7,46 @@ app.directive("scrollFunction", function () {
             var avance = 0;
             $scope.records = [{
                 id: 1,
-                name: "mia"
+                name: "figure1"
             }, {
                 id: 2,
-                name: "juan"
-            },{
+                name: "figure2"
+            }, {
                 id: 2,
-                name: "juan"
-            },{
+                name: "figure3"
+            }, {
                 id: 2,
-                name: "juan"
+                name: "figure4"
+            }, {
+                id: 2,
+                name: "figure5"
+            }, {
+                id: 2,
+                name: "figure6"
+            }, {
+                id: 2,
+                name: "figure7"
             }];
-                $("#boton").click(function (event) {
-                    if (avance > 0) {
-                        avance = avance - 30;
-                    }
+            $("#boton").click(function (event) {
+                if (avance > 0) {
+                    avance = avance - 30;
+                }
 
-                    $("div.m_wrap > .dx").scrollLeft(avance);
-                });
-                $("#botonstop").click(function (event) {
-                    avance = avance + 30;
+                $("div.m_wrap > .dx").scrollLeft(avance);
+            });
+            $("#botonstop").click(function (event) {
+                avance = avance + 30;
 
-                    $("div.m_wrap > .dx").scrollLeft(avance);
-                });
+                $("div.m_wrap > .dx").scrollLeft(avance);
+            });
         }
     }
 
 });
-app.component("helloWorld",{
-    template: 'Hello {{$ctrl.name}}!',
-    bindings: { name: '@' }
-    });
+app.component("helloWorld", {
+    template: '<div id="figure">{{$ctrl.name}}!</div>',
+    bindings: {name: '@'}
+});
 
 
 
